@@ -44,6 +44,8 @@ namespace WindowsFormsApp1
 
             dataReader = command.ExecuteReader();
 
+            // while we have data, go get it 
+            // the table has 2 columns, "idNumber" and "someText", these are GetValue(0) and GetValue(1) respectively.
             while (dataReader.Read())
             {
                 Output = Output + dataReader.GetValue(0) + " - " + dataReader.GetValue(1) + "\n";
